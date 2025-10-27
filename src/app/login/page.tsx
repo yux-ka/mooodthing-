@@ -3,7 +3,7 @@ import { LoginForm } from '@/components/login-form'
 
 const Login = () => {
   return (
-    <LoginForm></LoginForm>
+    <LoginForm className='w-full m-auto sm:w-96'></LoginForm>
   )
 }
 

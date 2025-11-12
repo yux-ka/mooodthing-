@@ -21,17 +21,17 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
-        <CardHeader>
+      <Card className="pb-96 bg-cambridge-blue-0 sm:pb-3 text-white">
+        <CardHeader className="pt-44 sm:pt-0">
           <CardTitle>Login to your account</CardTitle>
-          <CardDescription>
+          <CardDescription className="text-charcoal-0">
             Enter your email below to login to your account
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form>
             <FieldGroup>
-              <Field>
+              <Field className="text-white">
                 <FieldLabel htmlFor="email">Email</FieldLabel>
                 <Input
                   id="email"
@@ -45,16 +45,16 @@ export function LoginForm({
                   <FieldLabel htmlFor="password">Password</FieldLabel>
                   <a
                     href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline text-black"
                   >
                     Forgot your password?
                   </a>
                 </div>
-                <Input id="password" type="password" required />
+                <Input id="password" type="password" placeholder="Notpassword123" required />
               </Field>
               <Field>
-                <Button type="submit">Login</Button>
-                <Button variant="outline" type="button">
+                <Button type="submit" className="cursor-pointer">Login</Button>
+                <Button variant="outline" type="button" className="text-black cursor-pointer">
                   Login with Google
                 </Button>
                 <FieldDescription className="text-center">

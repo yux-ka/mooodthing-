@@ -41,6 +41,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-wenge: oklch(104, 83, 77);
 }
 
 :root {
@@ -119,4 +120,18 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.login-bg {
+  background-color: rgb(104,83,77);
+}
+
+@theme {
+  --color-ash-grays-0: #CAD2C5;
+  --color-cambridge-blue-0: #84A98C;
+  --color-hooker-green-0: #52796F;
+  --color-dark-slate-gray-0: #354F52;
+  --color-charcoal-0: #2F3E46;
+
 }

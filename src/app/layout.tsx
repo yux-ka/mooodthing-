@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { StackProvider, StackTheme } from "@stackframe/stack";
+import { StackProvider, StackTheme, useUser } from "@stackframe/stack";
 import { stackClientApp } from "../stack/client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -24,11 +24,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const theme = {
+  light: {
+    primary: '#52796F',
+    input: '#84A98C'
+  },
+  dark: {
+    primary: '#52796F',
+  },
+  radius: '8px',
+ 
+}
+// ...
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><StackProvider app={stackClientApp}><StackTheme>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-cambridge-blue-0`}
+      ><StackProvider app={stackClientApp}><StackTheme theme={theme}>
         {children}
       </StackTheme></StackProvider></body>
     </html>
